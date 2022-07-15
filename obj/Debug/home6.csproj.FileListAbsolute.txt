@@ -1,0 +1,7 @@
+C:\Users\vitalya\source\repos\home6\bin\Debug\home6.exe.config
+C:\Users\vitalya\source\repos\home6\bin\Debug\home6.exe
+C:\Users\vitalya\source\repos\home6\bin\Debug\home6.pdb
+C:\Users\vitalya\source\repos\home6\obj\Debug\home6.csproj.AssemblyReference.cache
+C:\Users\vitalya\source\repos\home6\obj\Debug\home6.csproj.CoreCompileInputs.cache
+C:\Users\vitalya\source\repos\home6\obj\Debug\home6.exe
+C:\Users\vitalya\source\repos\home6\obj\Debug\home6.pdb
