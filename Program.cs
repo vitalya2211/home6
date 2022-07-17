@@ -26,8 +26,23 @@ namespace home6
                 }
                 return arr;
             }
-           /* Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-            b1 = 2, k1 = 5, b2 = 4, k2 = 9-> (-0, 5; 5,5)*/
+            double Cross(double[] vs)
+            {
+                double Res;
+                Res = vs[1] - vs[3];
+                Res /= vs[0] - vs[2];
+                return -Res;
+            }
+            double Cross2(double Y,double[] vs)
+            {
+                Y = vs[2] * Y + vs[3];
+                return Y;
+            }
+
+           /* Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+            заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
+            значения b1, k1, b2 и k2 задаются пользователем.
+            b1 = 2, k1 = 5, b2 = 4, k2 = 9-> (-0, 5; -0,5)*/
             int M,count=0;
             int[] array= { };
             Console.WriteLine("задача 1. Пользователь вводит с клавиатуры M чисел. " +
@@ -56,7 +71,26 @@ namespace home6
             Console.WriteLine("Напишите программу, которая найдёт точку пересечения двух прямых, " +
                 "заданных уравнениями y = k1 * x + b1, y = k2 * x + b2;" +
                 " значения b1, k1, b2 и k2 задаются пользователем.");
-            
+
+            double[] arrayDub = new double[4];
+            Console.WriteLine("разделитель дробной части при вводе ',' ");
+            Console.Write("введите значение k1: ");
+            arrayDub[0] = Convert.ToDouble(Console.ReadLine());
+            Console.Write("введите значение b1: ");
+            arrayDub[1] = Convert.ToDouble(Console.ReadLine());
+            Console.Write("введите значение k2: ");
+            arrayDub[2] = Convert.ToDouble(Console.ReadLine());
+            Console.Write("введите значение b2: ");
+            arrayDub[3] = Convert.ToDouble(Console.ReadLine());
+            if (arrayDub[0] == arrayDub[2] & arrayDub[1] == arrayDub[3])
+                Console.WriteLine("прямые совпадают");
+            else if (arrayDub[0] == arrayDub[2])
+                Console.WriteLine("прямые парралельны");
+            else
+            {
+               Console.WriteLine( Cross(arrayDub)+" : "+Cross2(Cross(arrayDub),arrayDub));
+            }
+                Console.ReadKey();
         }
     }
     }
